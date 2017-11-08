@@ -1,0 +1,14 @@
+<!-- <form action ="/users" method="POST">
+  <label for="username">Username:</label><input type="text" name = "user[username]"></br>
+  <label for="email">Email:</label><input type="text" name = "user[email]"></br>
+  <label for="password">Password:</label><input type="password" name = "user[password]"></br>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="submit" value="Submit">
+</form> -->
+
+<%= form_for(@user) do |f|%>
+  <%= f.label :username, "Username: "%><%= f.text_field :username%></br>
+  <%= f.label :email, "Email: "%><%= f.text_field :email%></br>
+  <%= f.label :password, "Password: "%><%= f.password_field :password %></br>
+  <%= f.submit "Submit"%>
+<%end%>
